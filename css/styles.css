@@ -1,0 +1,225 @@
+/* ROOT */
+:root{
+    --main-font-family: "Nunito Sans", "Arial", sans-serif;
+    --main-font-weight: 400;
+    --main-body-bg-color: #fafafa;
+    --main-card-bg-color: #fff;
+    --main-text-color: #111517;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: 
+    url("../fonts/nunito-sans-v12-latin-300.woff2") format("woff2"), 
+    url("../fonts/nunito-sans-v12-latin-300.woff") format("woff"); 
+}
+@font-face {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: 
+    url("../fonts/nunito-sans-v12-latin-regular.woff2") format("woff2"), 
+    url("../fonts/nunito-sans-v12-latin-regular.woff") format("woff"); 
+}
+@font-face {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: 
+    url("../fonts/nunito-sans-v12-latin-600.woff2") format("woff2"), 
+    url("../fonts/nunito-sans-v12-latin-600.woff") format("woff"); 
+}
+@font-face {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: 
+    url("../fonts/nunito-sans-v12-latin-800.woff2") format("woff2"), 
+    url("../fonts/nunito-sans-v12-latin-800.woff") format("woff"); 
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    font-family: var(--main-font-family);
+    font-weight: var(--main-font-weight);
+    background-color: var(--main-body-bg-color);
+    color: var(--main-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode{
+    --main-body-bg-color: #202c36;
+    --main-card-bg-color: #2b3844;
+    --main-text-color: #fff;
+}
+
+.site-header{
+    margin-bottom: 48px;
+    padding: 24px 0;
+    background-color: var(--main-card-bg-color);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo{
+    color: var(--main-text-color);
+}
+.logo:hover{
+    color: var(--main-text-color);
+}
+
+.dark-btn{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--main-text-color);
+}
+.dark-btn::before{
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    margin-right: 11px;
+    background-image: url("../images/moon-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: "";
+}
+.dark-mode .dark-btn::before{
+    background-image: url("../images/moon-white.svg");
+}
+
+.search-form{
+    max-width: 480px;
+    width: 100%;
+}
+
+.hero-search{
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+    padding-left: 74px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--main-text-color);
+    background-color: var(--main-card-bg-color);
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    background-image: url("../images/icon-search-black.svg");
+    background-repeat: no-repeat;
+    background-position: center left+32px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.hero-search::placeholder{
+    font-weight: 400;
+    color: #848484;
+}
+
+.dark-mode .hero-search{
+    background-image: url("../images/icon-search-white.svg");
+}
+.dark-mode .hero-search::placeholder{
+    color: var(--main-text-color);
+}
+
+.region-form{
+    max-width: 200px;
+    width: 100%;
+}
+
+.hero-select{
+    padding-top: 18px;
+    padding-right: 18px;
+    padding-bottom: 18px;
+    padding-left: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--main-text-color);
+    background-color: var(--main-card-bg-color);
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    background-image: url("../images/arrow-to-bottom-black.svg");
+    background-repeat: no-repeat;
+    background-position: center right+19px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    appearance: none;
+}
+
+.dark-mode .hero-select{
+    background-image: url("../images/arrow-to-bottom-white.svg");
+}
+
+.countries-list{
+    margin-top: 45px;   
+}
+
+.hero-card{
+    background: var(--main-card-bg-color);
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-card-box{
+    padding: 24px;
+}
+
+.hero-img{
+    border-radius: 5px 5px 0px 0px;
+}
+
+.hero-country-title{
+    margin-bottom: 16px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.hero-country-desc{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.hero-country-desc-text{
+    font-weight: 300;
+}
+
+.modal-dialog{
+    max-width: 700px;
+}
+
+.modal-bg{
+    background-color: var(--main-card-bg-color);
+}
+
+.dark-mode .btn-close{
+    background-image: url("../images/X.svg");
+}
+
+.modal-img{
+    max-width: 250px;
+}
